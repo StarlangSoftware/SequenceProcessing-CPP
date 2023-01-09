@@ -1,8 +1,20 @@
 //
-// Created by Oğuz Kerem Yıldız on 8.01.2023.
+// Created by Olcay Taner YILDIZ on 9.01.2023.
 //
 
-#ifndef SEQUENCEPROCESSING_CPP_LABELLEDSENTENCE_H
-#define SEQUENCEPROCESSING_CPP_LABELLEDSENTENCE_H
+#ifndef SEQUENCEPROCESSING_LABELLEDSENTENCE_H
+#define SEQUENCEPROCESSING_LABELLEDSENTENCE_H
 
-#endif //SEQUENCEPROCESSING_CPP_LABELLEDSENTENCE_H
+
+#include <Sentence.h>
+
+class LabelledSentence : public Sentence{
+private:
+    string classLabel;
+public:
+    explicit LabelledSentence(const string& classLabel);
+    string getClassLabel() const;
+};
+
+
+#endif //SEQUENCEPROCESSING_LABELLEDSENTENCE_H
