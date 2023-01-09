@@ -1,0 +1,6 @@
+[requires]
+WordToVec/1.0.0
+Classification/1.0.0
+
+[generators]
+cmake
