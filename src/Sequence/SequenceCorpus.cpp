@@ -6,6 +6,7 @@
 #include "Dictionary/VectorizedWord.h"
 #include "LabelledSentence.h"
 #include "LabelledVectorizedWord.h"
+#include "StringUtils.h"
 
 SequenceCorpus::SequenceCorpus(const string &fileName) : Corpus() {
     string line, word;
@@ -15,7 +16,7 @@ SequenceCorpus::SequenceCorpus(const string &fileName) : Corpus() {
     inputStream.open(fileName, ifstream::in);
     while (inputStream.good()){
         getline(inputStream, line);
-        vector<string> items = Word::split(line);
+        vector<string> items = StringUtils::split(line);
         word = items[0];
         if (word == "<S>") {
             if (items.size() == 2){
