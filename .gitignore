@@ -1,0 +1,16 @@
+# Build directories
+build/
+cmake-build-*/
+
+# IDE
+.idea/
+.vscode/
+
+# macOS
+.DS_Store
+
+# Conan
+CMakeUserPresets.json
+
+# Temporary scripts
+fix_addEdge.py
