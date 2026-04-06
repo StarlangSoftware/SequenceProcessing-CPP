@@ -51,3 +51,7 @@ add_executable(Test
         src/Classification/Transformer.h src/Classification/Transformer.cpp
         Test/SequenceCorpusTest.cpp Test/TransformerTest.cpp)
 target_link_libraries(Test word_to_vec::word_to_vec classification::classification computational_graph::computational_graph)
+
+# Copy data .txt files to the build directory so tests can find them
+file(GLOB DATA_FILES "${CMAKE_CURRENT_SOURCE_DIR}/*.txt")
+file(COPY ${DATA_FILES} DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
