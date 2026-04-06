@@ -48,7 +48,7 @@ SequenceCorpus::SequenceCorpus(const string &fileName) : Corpus() {
 vector<string> SequenceCorpus::getClassLabels() {
   bool sentenceLabelled = false;
   vector<string> classLabels;
-  auto *t = dynamic_cast<LabelledSentence *>(sentences[0]);
+  auto *t = (LabelledSentence *)(sentences[0]);
   if (t != nullptr) {
     sentenceLabelled = true;
   }
