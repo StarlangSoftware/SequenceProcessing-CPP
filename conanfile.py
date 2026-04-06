@@ -7,7 +7,7 @@ from conan.tools.files import copy
 
 class SequenceProcessingConan(ConanFile):
     name = "sequence_processing"
-    version = "1.0.0"
+    version = "1.0.1"
     requires = ["word_to_vec/1.0.0",
                 "classification/1.0.0",
                 "computational_graph/1.0.0",
@@ -24,7 +24,7 @@ class SequenceProcessingConan(ConanFile):
     settings = "os", "compiler", "build_type", "arch"
     options = {"shared": [True, False], "fPIC": [True, False]}
     default_options = {"shared": False, "fPIC": True}
-    exports_sources = "src/*", "Test/*"
+    exports_sources = "src/*", "Test/*", "CMakeLists.txt", "*.txt"
 
     def layout(self):
         cmake_layout(self, src_folder=".")
